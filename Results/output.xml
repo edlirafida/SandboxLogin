@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.7.0 on win32)" generated="20210928 12:08:18.084" rpa="false" schemaversion="2">
+<suite id="s1" name="SandboxLogin" source="C:\SandboxLogin\Tests\Sandbox\SandboxLogin.robot">
+<test id="s1-t1" name="Test Case 1: Log in to Sandbox as unregistered user">
+<kw name="Start TestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210928 12:08:18.644" level="INFO">Opening browser 'chrome' to base url 'https://qa-sandbox.ni.htec.rs/'.</msg>
+<status status="PASS" starttime="20210928 12:08:18.643" endtime="20210928 12:08:23.512"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210928 12:08:23.513" endtime="20210928 12:08:23.674"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:18.642" endtime="20210928 12:08:23.674"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='nav-links--link']//child::a[@href='/login']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:23.674" endtime="20210928 12:08:23.704"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='nav-links--link']//child::a[@href='/login']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:08:23.705" level="INFO">Sending key(s) ('[return]',) to //div[@class='nav-links--link']//child::a[@href='/login'] element.</msg>
+<msg timestamp="20210928 12:08:24.102" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:08:23.704" endtime="20210928 12:08:24.162"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:24.164" endtime="20210928 12:08:24.205"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:24.205" endtime="20210928 12:08:24.244"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='react-switch-bg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:24.245" endtime="20210928 12:08:24.279"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:24.281" endtime="20210928 12:08:24.310"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>test@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:08:24.312" level="INFO">Typing text 'test@test.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20210928 12:08:24.310" endtime="20210928 12:08:24.548"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>123abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:08:24.549" level="INFO">Typing text '123abc' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210928 12:08:24.549" endtime="20210928 12:08:24.724"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:08:24.725" level="INFO">Sending key(s) ('[return]',) to //button[@class='full-width-btn'] element.</msg>
+<msg timestamp="20210928 12:08:25.047" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:08:24.725" endtime="20210928 12:08:25.107"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//label[@id='validation-msg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:25.108" endtime="20210928 12:08:25.363"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210928 12:08:29.363" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210928 12:08:25.363" endtime="20210928 12:08:29.363"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210928 12:08:29.363" endtime="20210928 12:08:32.274"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:25.363" endtime="20210928 12:08:32.275"/>
+</kw>
+<doc>Sandbox Login</doc>
+<tag>Login</tag>
+<tag>Negative</tag>
+<status status="PASS" starttime="20210928 12:08:18.641" endtime="20210928 12:08:32.276"/>
+</test>
+<test id="s1-t2" name="Test Case 2: Log in to Sandbox with invalid password">
+<kw name="Start TestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210928 12:08:32.285" level="INFO">Opening browser 'chrome' to base url 'https://qa-sandbox.ni.htec.rs/'.</msg>
+<status status="PASS" starttime="20210928 12:08:32.284" endtime="20210928 12:08:36.007"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210928 12:08:36.008" endtime="20210928 12:08:36.143"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:32.283" endtime="20210928 12:08:36.144"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[@class='landing-buttons--btn btn btn-primary']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:36.146" endtime="20210928 12:08:36.190"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//a[@class='landing-buttons--btn btn btn-primary']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:08:36.193" level="INFO">Sending key(s) ('[return]',) to //a[@class='landing-buttons--btn btn btn-primary'] element.</msg>
+<msg timestamp="20210928 12:08:36.612" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:08:36.192" endtime="20210928 12:08:36.675"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:36.677" endtime="20210928 12:08:36.714"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:36.714" endtime="20210928 12:08:36.754"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='react-switch-bg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:36.755" endtime="20210928 12:08:36.778"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:36.779" endtime="20210928 12:08:36.794"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>edlirafida@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:08:36.796" level="INFO">Typing text 'edlirafida@hotmail.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20210928 12:08:36.794" endtime="20210928 12:08:36.949"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>123abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:08:36.950" level="INFO">Typing text '123abc' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210928 12:08:36.950" endtime="20210928 12:08:37.079"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:08:37.080" level="INFO">Sending key(s) ('[return]',) to //button[@class='full-width-btn'] element.</msg>
+<msg timestamp="20210928 12:08:37.414" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:08:37.080" endtime="20210928 12:08:37.471"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//label[@id='validation-msg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:37.474" endtime="20210928 12:08:37.727"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210928 12:08:41.729" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210928 12:08:37.728" endtime="20210928 12:08:41.729"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210928 12:08:41.729" endtime="20210928 12:08:44.736"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:37.727" endtime="20210928 12:08:44.737"/>
+</kw>
+<doc>Sandbox Login</doc>
+<tag>Login</tag>
+<tag>Negative</tag>
+<status status="PASS" starttime="20210928 12:08:32.280" endtime="20210928 12:08:44.739"/>
+</test>
+<test id="s1-t3" name="Test Case 3: Confirm that password is case sensitive">
+<kw name="Start TestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210928 12:08:44.746" level="INFO">Opening browser 'chrome' to base url 'https://qa-sandbox.ni.htec.rs/'.</msg>
+<status status="PASS" starttime="20210928 12:08:44.746" endtime="20210928 12:08:48.819"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210928 12:08:48.819" endtime="20210928 12:08:48.945"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:44.745" endtime="20210928 12:08:48.946"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='nav-links--link']//child::a[@href='/login']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:48.946" endtime="20210928 12:08:48.976"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='nav-links--link']//child::a[@href='/login']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:08:48.977" level="INFO">Sending key(s) ('[return]',) to //div[@class='nav-links--link']//child::a[@href='/login'] element.</msg>
+<msg timestamp="20210928 12:08:49.362" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:08:48.977" endtime="20210928 12:08:49.433"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:49.433" endtime="20210928 12:08:49.472"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:49.473" endtime="20210928 12:08:49.498"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='react-switch-bg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:49.499" endtime="20210928 12:08:49.528"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:49.528" endtime="20210928 12:08:49.555"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>edlirafida@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:08:49.558" level="INFO">Typing text 'edlirafida@hotmail.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20210928 12:08:49.556" endtime="20210928 12:08:49.845"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>aMIRRITA1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:08:49.847" level="INFO">Typing text 'aMIRRITA1' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210928 12:08:49.846" endtime="20210928 12:08:50.028"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:08:50.029" level="INFO">Sending key(s) ('[return]',) to //button[@class='full-width-btn'] element.</msg>
+<msg timestamp="20210928 12:08:50.341" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:08:50.029" endtime="20210928 12:08:50.406"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//label[@id='validation-msg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:08:50.408" endtime="20210928 12:08:50.660"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210928 12:08:54.666" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210928 12:08:50.660" endtime="20210928 12:08:54.666"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210928 12:08:54.666" endtime="20210928 12:08:57.754"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:50.660" endtime="20210928 12:08:57.754"/>
+</kw>
+<doc>Sandbox Login</doc>
+<tag>Login</tag>
+<tag>Negative</tag>
+<status status="PASS" starttime="20210928 12:08:44.742" endtime="20210928 12:08:57.755"/>
+</test>
+<test id="s1-t4" name="Test Case 4: Log in to Sandbox from the Login button at the top right. Don't select &quot;Remember me&quot;">
+<kw name="Start TestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210928 12:08:57.759" level="INFO">Opening browser 'chrome' to base url 'https://qa-sandbox.ni.htec.rs/'.</msg>
+<status status="PASS" starttime="20210928 12:08:57.758" endtime="20210928 12:09:01.234"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210928 12:09:01.235" endtime="20210928 12:09:01.353"/>
+</kw>
+<status status="PASS" starttime="20210928 12:08:57.758" endtime="20210928 12:09:01.353"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='nav-links--link']//child::a[@href='/login']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:01.354" endtime="20210928 12:09:01.382"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='nav-links--link']//child::a[@href='/login']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:01.384" level="INFO">Sending key(s) ('[return]',) to //div[@class='nav-links--link']//child::a[@href='/login'] element.</msg>
+<msg timestamp="20210928 12:09:01.762" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:01.384" endtime="20210928 12:09:01.823"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:01.825" endtime="20210928 12:09:01.861"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:01.864" endtime="20210928 12:09:01.903"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='react-switch-bg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:01.904" endtime="20210928 12:09:01.941"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:01.941" endtime="20210928 12:09:01.979"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>edlirafida@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:09:01.983" level="INFO">Typing text 'edlirafida@hotmail.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20210928 12:09:01.982" endtime="20210928 12:09:02.248"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>Amirrita1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:09:02.249" level="INFO">Typing text 'Amirrita1' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210928 12:09:02.249" endtime="20210928 12:09:02.398"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:02.399" level="INFO">Sending key(s) ('[return]',) to //button[@class='full-width-btn'] element.</msg>
+<msg timestamp="20210928 12:09:02.718" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:02.399" endtime="20210928 12:09:02.741"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='navigate-left-title']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:02.742" endtime="20210928 12:09:03.252"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[@href='/dashboard']/parent::div[@class='nav-links--link']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:03.255" endtime="20210928 12:09:03.295"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//a[@href='/dashboard']/parent::div[@class='nav-links--link']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:03.298" level="INFO">Sending key(s) ('[return]',) to //a[@href='/dashboard']/parent::div[@class='nav-links--link'] element.</msg>
+<msg timestamp="20210928 12:09:03.619" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:03.296" endtime="20210928 12:09:03.729"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='confirmation-dialog--buttons--confirm']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:03.729" endtime="20210928 12:09:03.743"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='confirmation-dialog--buttons--confirm']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:03.744" level="INFO">Sending key(s) ('[return]',) to //div[@class='confirmation-dialog--buttons--confirm'] element.</msg>
+<msg timestamp="20210928 12:09:04.364" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:03.744" endtime="20210928 12:09:04.381"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@value='' and @name='email']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:04.381" endtime="20210928 12:09:04.400"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@value='' and @name='password']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:04.401" endtime="20210928 12:09:04.423"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210928 12:09:08.438" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210928 12:09:04.424" endtime="20210928 12:09:08.438"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210928 12:09:08.438" endtime="20210928 12:09:11.076"/>
+</kw>
+<status status="PASS" starttime="20210928 12:09:04.424" endtime="20210928 12:09:11.076"/>
+</kw>
+<doc>Sandbox Login</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20210928 12:08:57.757" endtime="20210928 12:09:11.078"/>
+</test>
+<test id="s1-t5" name="Test Case 5: Log in to Sandbox from the Login button at the center of the page (body). Select &quot;Remember me&quot;">
+<kw name="Start TestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210928 12:09:11.087" level="INFO">Opening browser 'chrome' to base url 'https://qa-sandbox.ni.htec.rs/'.</msg>
+<status status="PASS" starttime="20210928 12:09:11.085" endtime="20210928 12:09:14.840"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210928 12:09:14.840" endtime="20210928 12:09:14.963"/>
+</kw>
+<status status="PASS" starttime="20210928 12:09:11.081" endtime="20210928 12:09:14.963"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[@class='landing-buttons--btn btn btn-primary']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:14.964" endtime="20210928 12:09:14.987"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//a[@class='landing-buttons--btn btn btn-primary']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:14.990" level="INFO">Sending key(s) ('[return]',) to //a[@class='landing-buttons--btn btn btn-primary'] element.</msg>
+<msg timestamp="20210928 12:09:15.378" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:14.989" endtime="20210928 12:09:15.433"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:15.435" endtime="20210928 12:09:15.474"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:15.474" endtime="20210928 12:09:15.515"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='react-switch-bg']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:15.517" endtime="20210928 12:09:15.560"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:15.561" endtime="20210928 12:09:15.598"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='email']</arg>
+<arg>edlirafida@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:09:15.598" level="INFO">Typing text 'edlirafida@hotmail.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20210928 12:09:15.598" endtime="20210928 12:09:15.811"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name='password']</arg>
+<arg>Amirrita1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210928 12:09:15.812" level="INFO">Typing text 'Amirrita1' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20210928 12:09:15.812" endtime="20210928 12:09:15.958"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='react-switch-bg']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:15.959" level="INFO">Sending key(s) ('[return]',) to //div[@class='react-switch-bg'] element.</msg>
+<msg timestamp="20210928 12:09:16.248" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:15.958" endtime="20210928 12:09:16.305"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@class='full-width-btn']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:16.308" level="INFO">Sending key(s) ('[return]',) to //button[@class='full-width-btn'] element.</msg>
+<msg timestamp="20210928 12:09:16.664" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:16.306" endtime="20210928 12:09:16.729"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='navigate-left-title']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:16.729" endtime="20210928 12:09:16.985"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[@href='/dashboard']/parent::div[@class='nav-links--link']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:16.986" endtime="20210928 12:09:17.002"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//a[@href='/dashboard']/parent::div[@class='nav-links--link']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:17.003" level="INFO">Sending key(s) ('[return]',) to //a[@href='/dashboard']/parent::div[@class='nav-links--link'] element.</msg>
+<msg timestamp="20210928 12:09:17.317" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:17.002" endtime="20210928 12:09:17.338"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='confirmation-dialog--buttons--confirm']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:17.339" endtime="20210928 12:09:17.350"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//div[@class='confirmation-dialog--buttons--confirm']</arg>
+<arg>[return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210928 12:09:17.351" level="INFO">Sending key(s) ('[return]',) to //div[@class='confirmation-dialog--buttons--confirm'] element.</msg>
+<msg timestamp="20210928 12:09:17.722" level="INFO">Sending keys [return]</msg>
+<status status="PASS" starttime="20210928 12:09:17.350" endtime="20210928 12:09:17.739"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@value='edlirafida@hotmail.com' and @name='email']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:17.739" endtime="20210928 12:09:17.750"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@value='Amirrita1' and @name='password']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210928 12:09:17.750" endtime="20210928 12:09:17.761"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210928 12:09:21.769" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20210928 12:09:17.761" endtime="20210928 12:09:21.769"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210928 12:09:21.769" endtime="20210928 12:09:24.885"/>
+</kw>
+<status status="PASS" starttime="20210928 12:09:17.761" endtime="20210928 12:09:24.885"/>
+</kw>
+<doc>Sandbox Login</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20210928 12:09:11.081" endtime="20210928 12:09:24.888"/>
+</test>
+<doc>Test</doc>
+<status status="PASS" starttime="20210928 12:08:18.103" endtime="20210928 12:09:24.893"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">Login</stat>
+<stat pass="3" fail="0" skip="0">Negative</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="SandboxLogin">SandboxLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
